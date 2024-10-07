@@ -1,22 +1,18 @@
-# Who am I?
+# I'm Leon,
 
-Hello! I'm [Your Name], a developer and designer who is passionate about creating user-friendly and aesthetically pleasing solutions. I love combining creative ideas with technology and use various tools and platforms to bring innovative projects to life.
+An engineer dedicated to design-led innovation, where attention to detail is always at the forefront of my work. I love combining creative ideas with technology and use various tools and platforms to bring innovative projects to life.
 
 ---
 
-# My Projects
+# Projects
 
-Here is an overview of my current and past projects:
+## MyPortfolio – Personal Website
 
-## [Project 1: Title]
-**Description**: Brief description of the project (e.g., an application, tool, or design project).  
-**Technologies**: Various tools and technologies used in the project  
-**GitHub Repo**: [Link to the repository]
+A minimalistic and responsive personal portfolio website to showcase my projects, skills, and experience. Built with a focus on clean design and smooth user experience, the website is fully responsive across all devices.
 
-## [Project 2: Title]
-**Description**: Brief description of the second project.  
-**Technologies**: Additional technologies or tools used  
-**GitHub Repo**: [Link to the repository]
+[GitHub Repository](#)
+
+**Technologies**: HTML, CSS
 
 ---
 
@@ -30,12 +26,12 @@ Here's a summary of my professional and academic journey:
 
 ## Professional Experience
 - **iOS Developer** – IBM iX, Sep. 2022 – 2023  
-  - Developed an app for the client KKH, primarily using SwiftUI and Kotlin Multiplatform.  
+  - Developed an app for KKH, primarily using SwiftUI and Kotlin Multiplatform.  
   - Ensured code quality by writing tests and creating snapshots.  
   - Collaborated with designers and developers to maintain a consistent user experience across iOS and Android.
 
 - **Frontend Developer** – IBM iX, Aug. 2021 – 2022  
-  - Contributed to app and web development for the client BARMER using React and React Native.  
+  - Contributed to app and web development for BARMER using React and React Native.  
   - Played a key role in quality assurance and collaborated with designers and developers.  
   - Supported project organization and documentation and participated in a BARMER hackathon.
 
@@ -48,15 +44,9 @@ Here's a summary of my professional and academic journey:
   - Worked on the company website and intranet, maintaining the Cobra database.  
   - Assisted with IT issues and organized employee events.
 
-## Skills
-- **Programming Languages**: Swift, TypeScript, HTML, CSS, SQL  
-- **Libraries & Frameworks**: SwiftUI, Kotlin Multiplatform (KMP), React, React Native, Arduino  
-- **Tools & Platforms**: Git, Xcode, VSCode, Jira, Confluence, Figma, Oracle, Fastlane
-
 ---
 
 # My Socials
 
-- [GitHub](https://github.com/YourUsername)
-- [LinkedIn](https://www.linkedin.com/in/YourUsername)
-- [Twitter](https://twitter.com/YourUsername)
+- [GitHub](https://github.com/everornever)
+- [LinkedIn](https://www.linkedin.com/in/leon-kling/)
