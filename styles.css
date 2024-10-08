@@ -1,4 +1,13 @@
-/* styles.css */
+:root {
+    --background-color: #0d1118;
+    --section-color: #151c23;
+    --primary-color: #f0f6fc;
+    --secondary-color: #9198a1;
+    --layer-one: #2d333b;
+    --layer-two: #2e363e;
+    --layer-three: #3d444d;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,54 +16,160 @@
 
 body {
     font-family: 'Manrope', sans-serif;
-    line-height: 1.6;
     padding: 20px;
-    max-width: 800px;
+    max-width: 850px;
     margin: auto;
-    background-color: #0d1118ff;
-    color: #8b949e;
+    background-color: var(--background-color);
+    color: var(--primary-color);
 }
 
-header, section, footer {
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:start;
+    text-align: start;
+    height: 90vh;
+    gap: 30px;
+}
+
+section {
     margin-bottom: 20px;
 }
 
-h1, h2, h3 {
-    color: #ffffff;  /* White for headings */
+footer {
+    margin-bottom: 20px;
 }
 
 h1 {
-    font-size: 3em;
-    font-weight: 800;
-    margin-bottom: 0.5em;
+    font-size: 3.5em;
+    font-weight: 900;
     letter-spacing: -0.02em;
+    line-height: 1.1;
 }
 
 h2 {
     font-size: 2em;
-    font-weight: 600;
+    font-weight: 800;
     line-height: 1.3;
     margin-bottom: 0.75em;
+    letter-spacing: 0.02em;
+}
+
+h3 {
+    font-size: 1.5em;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 0.75em;
+    letter-spacing: 0.02em;
 }
 
 p {
-    font-size: 1em;
-    font-weight: 400;
-    line-height: 1.6;
+    font-size: 1.2em;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.015em;
+    color: var(--secondary-color);
 }
 
-.repo-link {
-    color: #007acc;
+/* =============== Buttons =============== */
+
+.button-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.button {
+    padding: 18px 30px;
+    font-size: 1.25em;
+    font-weight: 700;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 6px;
     text-decoration: none;
+    min-width: 200px;
 }
 
-.tags {
-    font-size: 0.9em;
-    color: #555;
+/* =============== Primary Button =============== */
+
+.primary-button {
+    position: relative;
+    background-color: var(--primary-color);
+    color: #000000;
+    border: none;
+    padding-right: 2em;
+    transition: all 0.2s ease-out;
 }
 
-footer a {
-    color: #333;
-    text-decoration: none;
-    margin-right: 10px;
+.primary-button::before {
+    content: ">";
+    position: absolute;
+    right: 1em;
+    transition: transform 0.2s ease-out;
+}
+
+.primary-button:hover::before {
+    transform: translateX(8px);
+}
+
+.primary-button:hover {
+    box-shadow: 0 0 20px var(--primary-color, 0.1);
+}
+
+.primary-button::after {
+    content: "--";
+    position: absolute;
+    right: 0.7em;
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out, transform 0.2s ease-in-out;
+    transform: translateX(5px);
+}
+
+.primary-button:hover::after {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* =============== Secondary Button =============== */
+
+.secondary-button {
+    position: relative;
+    background-color: transparent;
+    color: #ffffff;
+    border: 0.1em solid var(--layer-one);
+    position: relative;
+    padding-right: 2em;
+    transition: all 0.2s ease-out;
+}
+
+.secondary-button::before {
+    content: ">";
+    position: absolute;
+    right: 1em;
+    transition: transform 0.2s ease-out;
+}
+
+.secondary-button:hover::before {
+    transform: translateX(8px);
+}
+
+.secondary-button:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.05em var(--primary-color);
+}
+
+.secondary-button::after {
+    content: "--";
+    position: absolute;
+    right: 0.7em;
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out, transform 0.2s ease-in-out;
+    transform: translateX(2px);
+}
+
+.secondary-button:hover::after {
+    opacity: 1;
+    transform: translateX(0);
 }
