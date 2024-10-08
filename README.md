@@ -4,7 +4,7 @@ This site is continually updated as I expand its technologies and features.
 
 ## 🛠️ Version Protocol
 
-### 🚀 [V1.0 – Initial Structure](https://github.com/your-username/your-repository/releases/tag/v1.0)
+### 🚀 [v0.1 – Initial Structure](https://github.com/your-username/your-repository/releases/tag/v1.0)
 
 > **Features added:**
 > - **Basic HTML** – Set up the foundational structure.
