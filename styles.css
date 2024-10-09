@@ -1,11 +1,16 @@
 :root {
+    /* Colors */
     --background-color: #0d1118;
     --section-color: #151c23;
     --primary-color: #f0f6fc;
-    --secondary-color: #9198a1;
+    --primary-color-dark: #c9d1d9;
+    --black-color: #000000;
+    --white-color: #ffffff;
     --layer-one: #2d333b;
     --layer-two: #2e363e;
     --layer-three: #3d444d;
+    /* Spacing */
+    --spacing: 20px;
 }
 
 * {
@@ -16,7 +21,7 @@
 
 body {
     font-family: 'Manrope', sans-serif;
-    padding: 20px;
+    padding: var(--spacing);
     max-width: 850px;
     margin: auto;
     background-color: var(--background-color);
@@ -34,11 +39,11 @@ header {
 }
 
 section {
-    margin-bottom: 20px;
+    margin-bottom: var(--spacing);
 }
 
 footer {
-    margin-bottom: 20px;
+    margin-bottom: var(--spacing);
 }
 
 h1 {
@@ -81,26 +86,27 @@ p {
 }
 
 .button {
+    text-align: center;
     padding: 18px 30px;
     font-size: 1.25em;
     font-weight: 700;
     line-height: 1;
     display: inline-flex;
     align-items: center;
-    border-radius: 6px;
+    border-radius: 10px;
     text-decoration: none;
     min-width: 200px;
+    position: relative;
+    transition: all 0.2s ease-out;
+    padding-right: 2em;
 }
 
 /* =============== Primary Button =============== */
 
 .primary-button {
-    position: relative;
     background-color: var(--primary-color);
-    color: #000000;
+    color: var(--black-color);
     border: none;
-    padding-right: 2em;
-    transition: all 0.2s ease-out;
 }
 
 .primary-button::before {
@@ -135,13 +141,9 @@ p {
 /* =============== Secondary Button =============== */
 
 .secondary-button {
-    position: relative;
     background-color: transparent;
-    color: #ffffff;
+    color: var(--primary-color);
     border: 0.1em solid var(--layer-one);
-    position: relative;
-    padding-right: 2em;
-    transition: all 0.2s ease-out;
 }
 
 .secondary-button::before {
@@ -166,7 +168,7 @@ p {
     right: 0.7em;
     opacity: 0;
     transition: opacity 0.1s ease-in-out, transform 0.2s ease-in-out;
-    transform: translateX(2px);
+    transform: translateX(5px);
 }
 
 .secondary-button:hover::after {
