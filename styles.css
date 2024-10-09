@@ -86,19 +86,41 @@ p {
 }
 
 .button {
-    text-align: center;
-    padding: 18px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    min-width: 250px;
+
+    position: relative;
+    border-radius: 10px;
+
     font-size: 1.25em;
     font-weight: 700;
     line-height: 1;
-    display: inline-flex;
-    align-items: center;
-    border-radius: 10px;
     text-decoration: none;
-    min-width: 200px;
-    position: relative;
+
     transition: all 0.2s ease-out;
-    padding-right: 2em;
+}
+
+.button-content {
+    padding-right: 0.5em;
+}
+
+.button-arrow {
+    position: relative;
+    display: inline-block;
+    transition: transform 0.2s ease-out;
+}
+
+.button:hover .button-arrow::after {
+    content: "—";
+    position: absolute;
+    right: 0.2em;
+}
+
+.button:hover .button-arrow {
+    transform: translateX(5px);
 }
 
 /* =============== Primary Button =============== */
@@ -109,33 +131,8 @@ p {
     border: none;
 }
 
-.primary-button::before {
-    content: ">";
-    position: absolute;
-    right: 1em;
-    transition: transform 0.2s ease-out;
-}
-
-.primary-button:hover::before {
-    transform: translateX(8px);
-}
-
 .primary-button:hover {
     box-shadow: 0 0 20px var(--primary-color, 0.1);
-}
-
-.primary-button::after {
-    content: "--";
-    position: absolute;
-    right: 0.7em;
-    opacity: 0;
-    transition: opacity 0.1s ease-in-out, transform 0.2s ease-in-out;
-    transform: translateX(5px);
-}
-
-.primary-button:hover::after {
-    opacity: 1;
-    transform: translateX(0);
 }
 
 /* =============== Secondary Button =============== */
@@ -146,32 +143,7 @@ p {
     border: 0.1em solid var(--layer-one);
 }
 
-.secondary-button::before {
-    content: ">";
-    position: absolute;
-    right: 1em;
-    transition: transform 0.2s ease-out;
-}
-
-.secondary-button:hover::before {
-    transform: translateX(8px);
-}
-
 .secondary-button:hover {
     border-color: var(--primary-color);
     box-shadow: 0 0 0 0.05em var(--primary-color);
-}
-
-.secondary-button::after {
-    content: "--";
-    position: absolute;
-    right: 0.7em;
-    opacity: 0;
-    transition: opacity 0.1s ease-in-out, transform 0.2s ease-in-out;
-    transform: translateX(5px);
-}
-
-.secondary-button:hover::after {
-    opacity: 1;
-    transform: translateX(0);
 }
