@@ -9,8 +9,10 @@
     --layer-one: #2d333b;
     --layer-two: #2e363e;
     --layer-three: #3d444d;
+
+    --purpel-color: #bc8cff;
     /* Spacing */
-    --spacing: 20px;
+    --spacing: 1.25em;
 }
 
 * {
@@ -22,8 +24,6 @@
 body {
     font-family: 'Manrope', sans-serif;
     padding: var(--spacing);
-    max-width: 850px;
-    margin: auto;
     background-color: var(--background-color);
     color: var(--primary-color);
 }
@@ -32,10 +32,21 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items:start;
+    align-items: center;
     text-align: start;
     height: 90vh;
-    gap: 30px;
+
+    background-image: url(./Assets/topography.svg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.header-content {
+    max-width: 50em;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing);
 }
 
 section {
@@ -81,19 +92,19 @@ p {
 
 .button-container {
     display: flex;
-    gap: 10px;
-    margin-top: 10px;
+    gap: var(--spacing);
+    margin-top: 0.5em;
 }
 
 .button {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1em;
-    min-width: 250px;
+    padding: 0.7em;
+    min-width: 12em;
 
     position: relative;
-    border-radius: 10px;
+    border-radius: 0.6em;
 
     font-size: 1.25em;
     font-weight: 700;
@@ -120,7 +131,7 @@ p {
 }
 
 .button:hover .button-arrow {
-    transform: translateX(5px);
+    transform: translateX(0.3em);
 }
 
 /* =============== Primary Button =============== */
@@ -132,7 +143,7 @@ p {
 }
 
 .primary-button:hover {
-    box-shadow: 0 0 20px var(--primary-color, 0.1);
+    box-shadow: 0 0 1.25em var(--primary-color, 0.1);
 }
 
 /* =============== Secondary Button =============== */
@@ -140,7 +151,7 @@ p {
 .secondary-button {
     background-color: transparent;
     color: var(--primary-color);
-    border: 0.1em solid var(--layer-one);
+    border: 0.1em solid var(--purpel-color);
 }
 
 .secondary-button:hover {
