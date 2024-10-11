@@ -9,8 +9,12 @@
 
     --primary-color: #f0f6fc;
     --primary-color-dark: #c9d1d9;
+    --primary-color-super-dark: #c9d1d96a;
 
+    --green-color: #56d364;
+    --blue-color: #79c0ff;
     --purpel-color: #bc8cff;
+    --purpel-color-faded: #bc8cff0e;
     --black-color: #000000;
     --white-color: #ffffff;
 
@@ -54,6 +58,13 @@ h3 {
     letter-spacing: 0.02em;
 }
 
+h4 {
+    font-size: 1.25em;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: 0.02em;
+}
+
 p {
     font-size: 1.2em;
     font-weight: 500;
@@ -64,6 +75,11 @@ p {
 
 /* =============== Buttons =============== */
 
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
 .button-container {
     display: flex;
     gap: var(--spacing);
@@ -72,12 +88,12 @@ p {
 
 .button {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     padding: 0.8em;
     min-width: 12em;
 
-    position: relative;
     border-radius: 0.6em;
 
     font-size: 1.25em;
@@ -85,6 +101,7 @@ p {
     line-height: 1;
     text-decoration: none;
 
+    position: relative;
     transition: all 0.2s ease-out;
 }
 
@@ -130,6 +147,7 @@ p {
 
 .secondary-button:hover {
     border-color: var(--primary-color);
+    background-color: var(--primary-color-super-dark);
 }
 
 /* =============== Header =============== */
@@ -188,6 +206,10 @@ section {
     margin-top: var(--spacing);
 }
 
+#section-subtitle {
+    color: var(--primary-color-super-dark);
+}
+
 .project-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(250px, 1fr));
@@ -195,19 +217,52 @@ section {
     margin-top: 1em;
     justify-content:center;
 }
+.project-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--spacing);
 
-.project {
     background-color: var(--background-color);
     padding: var(--dubble-spacing);
     border-radius: 20px;
     border: var(--layer-three) 0.1em solid;
+    text-decoration: none;
+
+    position: relative;
+    transition: all 0.5s ease-out;
+
 }
 
-#project-text {
+.project-button:hover {
+    background-color: var(--purpel-color-faded);
+}
+
+.inline-button {
+    color: var(--blue-color);
+    text-decoration: none;
+}
+
+.project-text {
     font-size: 1em;
     font-weight: 400;
-    color: var(--primary-color-dark);
-    margin-bottom: var(--spacing);
+    color: var(--primary-color-super-dark);
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+}
+
+.tag {
+    padding: 0.3em 0.8em;
+    border: 1px solid var(--green-color);
+    border-radius: 20px;
+    font-size: 0.9em;
+    color: var(--green-color);
+    background-color: transparent;
+    font-weight: 600;
 }
 
 /* =============== Footer =============== */
