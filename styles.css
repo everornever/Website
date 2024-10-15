@@ -21,8 +21,14 @@
     /* Spacing */
     --spacing: 1.25em;
     --dubble-spacing: 2.5em;
+    --max-spacing: 5em;
     --max-width: 80em;
+
+    /* Border Radius */
+    --border-radius: 0.6em;
+    --round-border-radius: 1.25em;
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -94,7 +100,7 @@ a {
     padding: 0.8em;
     min-width: 12em;
 
-    border-radius: 0.6em;
+    border-radius: var(--border-radius);
 
     font-size: 1.25em;
     font-weight: 700;
@@ -170,7 +176,7 @@ header {
     display: flex;
     flex-direction: column;
     gap: var(--spacing);
-    padding: var(--spacing);
+    padding: var(--max-spacing);
 }
 
 /* =============== Sections =============== */
@@ -186,7 +192,7 @@ section {
 }
 
 .section-content {
-    padding: var(--spacing);
+    padding: var(--max-spacing);
     max-width: var(--max-width);
     display: flex;
     flex-direction: column;
@@ -215,8 +221,9 @@ section {
     grid-template-columns: repeat(3, minmax(250px, 1fr));
     gap: 1.5em;
     margin-top: 1em;
-    justify-content:center;
+    justify-content: center;
 }
+
 .project-button {
     display: flex;
     flex-direction: column;
@@ -225,7 +232,7 @@ section {
 
     background-color: var(--background-color);
     padding: var(--dubble-spacing);
-    border-radius: 20px;
+    border-radius: var(--round-border-radius);
     border: var(--layer-three) 0.1em solid;
     text-decoration: none;
 
@@ -249,20 +256,17 @@ section {
     color: var(--primary-color-super-dark);
 }
 
-.tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5em;
-}
-
 .tag {
+    display: inline-flex;
     padding: 0.3em 0.8em;
     border: 1px solid var(--green-color);
-    border-radius: 20px;
+    border-radius: var(--round-border-radius);
     font-size: 0.9em;
     color: var(--green-color);
     background-color: transparent;
     font-weight: 600;
+    align-self: flex-start;
+    white-space: nowrap;
 }
 
 /* =============== Footer =============== */
